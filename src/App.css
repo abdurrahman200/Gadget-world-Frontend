@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('./Assets/Images/background.png');
+    font-family: 'Rajdhani', sans-serif !important;
+    font-weight: 600 !important;
+}
