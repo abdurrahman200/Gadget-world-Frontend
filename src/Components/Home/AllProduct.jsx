@@ -10,7 +10,7 @@ const AllProduct = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://rhubarb-surprise-10351.herokuapp.com/products')
             .then(Response => Response.json())
             .then(data => setProducts(data))
     }, [])

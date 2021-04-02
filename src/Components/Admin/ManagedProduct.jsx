@@ -8,7 +8,7 @@ const ManagedProduct = () => {
 
     const [manageProduct, setManageProduct] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://rhubarb-surprise-10351.herokuapp.com/products')
             .then(Response => Response.json())
             .then(data => setManageProduct(data))
     }, [])
@@ -16,7 +16,7 @@ const ManagedProduct = () => {
 
     // Delete Product Item
     const deleteItem = id => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://rhubarb-surprise-10351.herokuapp.com/delete/${id}`, {
             method: "DELETE",
         }).then(res => {
             if (res) {

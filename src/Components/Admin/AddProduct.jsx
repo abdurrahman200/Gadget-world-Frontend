@@ -28,7 +28,7 @@ const AddProduct = () => {
         if (imageLink !== null) {
             const productData = data;
             productData.image = imageLink;
-            fetch('http://localhost:5000/addProduct', {
+            fetch('https://rhubarb-surprise-10351.herokuapp.com/addProduct', {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(productData)
