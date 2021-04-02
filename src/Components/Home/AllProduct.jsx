@@ -27,7 +27,7 @@ const AllProduct = () => {
                 {products.length === 0 && <img src={loader} alt="loader" />}
             </div>
             <Row justify="center">
-                {products && products.map(product => <Product product={product} key={product.id} />)}
+                {products && products.map(product => <Product product={product} key={product._id} />)}
             </Row>
 
         </div>

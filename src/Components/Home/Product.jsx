@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 const { Title } = Typography;
 
 const Product = ({ product }) => {
-    const { id, name, title, price, images } = product
+    const { _id, name, title, price, images } = product
     return (
         <>
             <Col xs={23} sm={12} md={8} lg={6} xl={4} xxl={4}>
                 <Card hoverable cover={<img alt="images" src={images} />} >
                     <Meta title={name} description={title} />
                     <Title level={3}> Price: ${price}</Title>
-                    <Link to={"/CheckOut/" + id}>  <Button type="primary" block> <ShoppingCartOutlined /> Boy Now </Button> </Link>
+                    <Link to={"/CheckOut/" + _id}>  <Button type="primary" block> <ShoppingCartOutlined /> Boy Now </Button> </Link>
                 </Card>
             </Col>
         </>

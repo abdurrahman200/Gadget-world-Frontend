@@ -5,14 +5,13 @@ import Navbar from '../Home/Navbar';
 import '../Style/Style.css'
 
 const CheckOut = () => {
-   
+
     let { id } = useParams();
     const [product, setProduct] = useState({});
 
-    const { title, price } = product;
-
+    const { name, price } = product;
     useEffect(() => {
-        fetch('https://rhubarb-surprise-10351.herokuapp.com/products/' + id)
+        fetch(`http://localhost:5000/product/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [id])
@@ -34,8 +33,14 @@ const CheckOut = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>{title}</td>
+                                        <td>{name}</td>
                                         <td>1</td>
+                                        <td>{price} </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Total</td>
+                                        <td></td>
                                         <td>{price} </td>
                                     </tr>
                                 </tbody>
