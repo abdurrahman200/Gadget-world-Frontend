@@ -28,7 +28,7 @@ const AddProduct = () => {
         if (imageURL !== null) {
             const productData = data;
             productData.image = imageURL;
-            fetch('https://rhubarb-surprise-10351.herokuapp.com/addProduct', {
+            fetch('https://apricot-crumble-74697.herokuapp.com/addProduct', {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(productData)
@@ -50,7 +50,7 @@ const AddProduct = () => {
 
                     <Card title="Add Product">
 
-                        <Form name="horizontal_login" layout="inline" onFinish={handleSubmit(onFinish)}>
+                        <Form name="horizontal_login" layout="inline" onFinish={onFinish}>
 
                             <Form.Item name="productName" rules={[{ required: true, message: 'Please input your Product Name!' }]} >
                                 <Input prefix={<ShoppingCartOutlined />} placeholder="Product Name" />
