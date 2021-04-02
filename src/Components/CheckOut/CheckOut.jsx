@@ -40,10 +40,10 @@ const CheckOut = () => {
                                         <td>1</td>
                                         <td>${price} </td>
                                     </tr>
-                                  
-                                    <tr style={{borderTop:'2px solid #ccc'}}>
-                                        <td></td>
+
+                                    <tr style={{ borderTop: '2px solid #ccc' }}>
                                         <td><strong>Total</strong></td>
+                                        <td></td>
                                         <td></td>
                                         <td>${price} </td>
                                     </tr>
