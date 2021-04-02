@@ -3,7 +3,7 @@ import { useAuth } from "./useAuth";
 
 const PrivateRoute = ({ children, ...rest }) => {
     const auth = useAuth();
-    console.log(auth);
+    // console.log(auth);
     return (
         <Route
             {...rest}

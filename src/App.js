@@ -15,13 +15,14 @@ import CheckOut from './Components/CheckOut/CheckOut';
 import EditProduct from './Components/Admin/EditProduct';
 import AdminPanel from './Components/Admin/AdminPanel';
 import Auth, { AuthContextProvider } from './Components/Auth/useAuth';
-import loader from './Assets/Images/loader.gif'
+
+import loader from './Assets/Images/loader.gif';
 
 export const UserContext = createContext();
 
 function App() {
   const auth = Auth();
-  console.log(auth);
+  // console.log(auth);
   return (
     auth.user === undefined || auth.user ?
       <AuthContextProvider>
@@ -42,9 +43,10 @@ function App() {
 
           </Switch>
         </Router>
-    </AuthContextProvider>
-    :
-    <img src={loader.gif} alt=""/>
+      </AuthContextProvider>
+      :
+      <img src={loader} width="200" alt="loader"/>
+      // <h1>Loading . . . . . </h1>
   );
 }
 

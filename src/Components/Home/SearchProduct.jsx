@@ -12,7 +12,7 @@ const SearchProduct = () => {
             <Row justify="center">
                 <Col xs={22} sm={20} md={18} lg={16} xl={14} xxl={12}>
                     <Card>
-                        <Title style={{ textAlign: 'center' }}>  Gadget World Online Shopping Store </Title>
+                        <Title style={{ textAlign: 'center' }}>  Gadget World Online Store </Title>
                         <Search placeholder="Search Your Product" allowClear enterButton="Search" size="large" />
                     </Card>
                 </Col>

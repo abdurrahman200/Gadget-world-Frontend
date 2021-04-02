@@ -31,7 +31,7 @@ const Auth = () => {
                 return res.user;
             })
             .catch(err => {
-                console.log(err.message);
+                // console.log(err.message);
                 setUser(null);
                 return err.message;
 
@@ -44,7 +44,7 @@ const Auth = () => {
                 return true;
             })
             .catch(err => {
-                console.log(err.message);
+                // console.log(err.message);
                 return false;
             });
     }

@@ -21,7 +21,7 @@ const Navbar = () => {
                     <Menu.Item> <Link to="/Order"> Order </Link> </Menu.Item>
                     <Menu.Item> <Link to="/Deals"> Deals </Link> </Menu.Item>
                     <Menu.Item> <Link to="/Contact"> Contact </Link> </Menu.Item>
-                    <Menu.Item> <Link to="/AdminPanel"> Admin Panel </Link> </Menu.Item>
+                    <Menu.Item> <Link to="/AdminPanel"> <Button type="primary"> Admin</Button> </Link> </Menu.Item>
                     {auth.user ?
                         <Menu.Item>  <Link to="/SignIn">  <Button type="primary" onClick={handleSignOut}> <LogoutOutlined /> {auth.user.name} </Button> </Link>  </Menu.Item>
                         :

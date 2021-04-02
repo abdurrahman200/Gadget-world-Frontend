@@ -21,7 +21,7 @@ const SignIn = () => {
     const GoogleSignIn = () => {
         auth.signInWithGoogle()
             .then(res => {
-                console.log(res);
+                // console.log(res);
                 history.replace(from);
             })
     }

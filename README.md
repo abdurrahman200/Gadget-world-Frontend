@@ -41,9 +41,7 @@ A single page gadget ecommerce  app where people are able to Choice Her gadget  
 
 ### Third Party
 * FakeData
-* Division FakeData
-* React-Hook-Form
-* Yup
+* imgbb For image upload
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # react-auth-abdurrahman200
