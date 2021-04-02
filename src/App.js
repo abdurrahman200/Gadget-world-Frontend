@@ -45,8 +45,9 @@ function App() {
         </Router>
       </AuthContextProvider>
       :
-      <img src={loader} width="200" alt="loader"/>
-      // <h1>Loading . . . . . </h1>
+      <div style={{ textAlign: 'center' }}>
+        <img src={loader} alt="loader" />
+      </div>
   );
 }
 

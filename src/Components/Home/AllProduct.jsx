@@ -23,7 +23,9 @@ const AllProduct = () => {
     return (
         <div>
             <SearchProduct />
-            {products.length === 0 &&   <img src={loader} width="200" alt="loader"/> }
+            <div style={{ textAlign: 'center' }}>
+                {products.length === 0 && <img src={loader} alt="loader" />}
+            </div>
             <Row justify="center">
                 {products && products.map(product => <Product product={product} key={product.id} />)}
             </Row>

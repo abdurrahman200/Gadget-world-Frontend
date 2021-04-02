@@ -1,9 +1,8 @@
 import { Button, Card, Col, Row } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
-
+import loader from '../../Assets/Images/loader.gif'
 const ManagedProduct = () => {
 
     const [manageProduct, setManageProduct] = useState([])
@@ -44,6 +43,13 @@ const ManagedProduct = () => {
                                 </thead>
 
                                 <tbody>
+                                    {
+                                        manageProduct.length === 0 &&
+                                        <div style={{ textAlign: 'center' }}>
+                                            <img src={loader} alt="loader" />
+                                        </div>
+                                    }
+
                                     {manageProduct.map(pd =>
                                         <tr>
                                             <td>{pd.id}</td>
