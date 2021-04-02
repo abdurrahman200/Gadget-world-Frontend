@@ -9,7 +9,8 @@ const CheckOut = () => {
     let { id } = useParams();
     const [product, setProduct] = useState({});
 
-    const { name, price } = product;
+    const { images, name, price } = product;
+
     useEffect(() => {
         fetch(`https://rhubarb-surprise-10351.herokuapp.com/product/${id}`)
             .then(res => res.json())
@@ -26,6 +27,7 @@ const CheckOut = () => {
                             <table>
                                 <thead>
                                     <tr>
+                                        <th>Images</th>
                                         <th>Description</th>
                                         <th>Quantity</th>
                                         <th>Price</th>
@@ -33,15 +35,17 @@ const CheckOut = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td><img src={images} alt="images" width="60" /></td>
                                         <td>{name}</td>
                                         <td>1</td>
-                                        <td>{price} </td>
+                                        <td>${price} </td>
                                     </tr>
-
-                                    <tr>
-                                        <td>Total</td>
+                                  
+                                    <tr style={{borderTop:'2px solid #ccc'}}>
                                         <td></td>
-                                        <td>{price} </td>
+                                        <td><strong>Total</strong></td>
+                                        <td></td>
+                                        <td>${price} </td>
                                     </tr>
                                 </tbody>
                             </table>
