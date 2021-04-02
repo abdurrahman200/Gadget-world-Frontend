@@ -53,7 +53,7 @@ const ManagedProduct = () => {
                                             <td>${pd.price}</td>
                                             <td>
                                                 <Link to="#"> <Button type="primary"> <EditOutlined /> </Button> </Link>
-                                                <Link to="#"> <Button onClick={() => deleteItem(pd._id)} style={{ backgroundColor: 'red' }}>  <DeleteOutlined /> </Button> </Link>
+                                                <Link to="/"> <Button onClick={() => deleteItem(pd._id)} style={{ backgroundColor: 'red' }}>  <DeleteOutlined /> </Button> </Link>
                                             </td>
                                         </tr>
                                     )}

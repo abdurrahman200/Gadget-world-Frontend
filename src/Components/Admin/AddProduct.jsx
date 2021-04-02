@@ -25,7 +25,7 @@ const AddProduct = () => {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(productData)
-            }).then(data => { if (data.ok == true) { <Redirect to='/addProduct' /> } })
+            }).then(data => { if (data.ok == true) { <Redirect to='/' /> } })
         }
         else { alert('Image is uploading , Please wait') }
     };
