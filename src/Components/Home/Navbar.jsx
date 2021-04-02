@@ -20,11 +20,11 @@ const Navbar = () => {
                     <Menu.Item> <Link to="/"> <HomeOutlined /> Gadget World </Link> </Menu.Item>
                     <Menu.Item> <Link to="/Deals"> Deals </Link> </Menu.Item>
                     <Menu.Item> <Link to="/Contact"> Contact </Link> </Menu.Item>
-                    <Menu.Item> <Link to="/AdminPanel"> <Button type="primary"> Admin</Button> </Link> </Menu.Item>
+                    <Menu.Item> <Link to="/AdminPanel"> Admin </Link> </Menu.Item>
                     {auth.user ?
-                        <Menu.Item>  <Link to="/SignIn">  <Button type="primary" onClick={handleSignOut}> <LogoutOutlined /> {auth.user.name} </Button> </Link>  </Menu.Item>
+                        <Menu.Item>  <Link to="/">  <Button type="primary" onClick={handleSignOut}> <LogoutOutlined /> {auth.user.name} </Button> </Link>  </Menu.Item>
                         :
-                        <Menu.Item>  <Link to="/SignIn">  <Button type="primary" > <AntDesignOutlined /> Sign In </Button> </Link>  </Menu.Item>
+                        <Menu.Item>  <Link to="/SignIn">  <Button > <AntDesignOutlined /> Sign In </Button> </Link>  </Menu.Item>
                     }
 
                 </Menu>
