@@ -17,7 +17,7 @@ const Navbar = () => {
         <Layout>
             <Header>
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['Home']}>
-                    <Menu.Item> <Link to="/Home"> <HomeOutlined /> Gadget World </Link> </Menu.Item>
+                    <Menu.Item> <Link to="/"> <HomeOutlined /> Gadget World </Link> </Menu.Item>
                     <Menu.Item> <Link to="/Deals"> Deals </Link> </Menu.Item>
                     <Menu.Item> <Link to="/Contact"> Contact </Link> </Menu.Item>
                     <Menu.Item> <Link to="/AdminPanel"> <Button type="primary"> Admin</Button> </Link> </Menu.Item>
