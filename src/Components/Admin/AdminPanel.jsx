@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu, Typography } from 'antd';
-import { AppstoreOutlined, EditOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, EditOutlined , DashboardOutlined } from '@ant-design/icons';
 import ManagedProduct from './ManagedProduct';
 import { Link } from 'react-router-dom';
 import AddProduct from './AddProduct';
@@ -23,7 +23,7 @@ const AdminPanel = () => {
                 <Layout style={{ padding: '2rem 1rem' }}>
                     <Content >
                         <div>
-                            <Title level={4}> DashBoard </Title>
+                            <Title level={4}> <DashboardOutlined /> DashBoard </Title>
                             <hr style={{ backgroundColor: '#ccc', width: '100%', marginBottom: '1rem' }} />
                         </div>
 
