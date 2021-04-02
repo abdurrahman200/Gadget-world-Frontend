@@ -47,9 +47,9 @@ const ManagedProduct = () => {
                                     {manageProduct.map(pd =>
                                         <tr>
                                             <td>{pd._id}</td>
-                                            <td><img src={pd.images} alt="" width="60" /></td>
-                                            <td>{pd.name}</td>
-                                            <td>{pd.title}</td>
+                                            <td><img src={pd.image} alt="" width="60" /></td>
+                                            <td>{pd.productName}</td>
+                                            <td>{pd.authorName}</td>
                                             <td>${pd.price}</td>
                                             <td>
                                                 <Link to="#"> <Button type="primary"> <EditOutlined /> </Button> </Link>
