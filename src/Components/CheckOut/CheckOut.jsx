@@ -11,7 +11,7 @@ const CheckOut = () => {
 
     const { name, price } = product;
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://rhubarb-surprise-10351.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [id])
