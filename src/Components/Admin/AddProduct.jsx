@@ -50,7 +50,7 @@ const AddProduct = () => {
 
                     <Card title="Add Product">
 
-                        <Form name="horizontal_login" layout="inline" onFinish={onFinish}>
+                        <Form name="horizontal_login" layout="inline" onFinish={handleSubmit(onFinish)}>
 
                             <Form.Item name="productName" rules={[{ required: true, message: 'Please input your Product Name!' }]} >
                                 <Input prefix={<ShoppingCartOutlined />} placeholder="Product Name" />
