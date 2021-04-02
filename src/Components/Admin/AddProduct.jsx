@@ -1,33 +1,33 @@
-import axios from 'axios';
 import React, { useState } from 'react';
-
-import { Form, Input, Button, Row, Col, Card, Upload } from 'antd';
-import { ShoppingCartOutlined, UserOutlined, UploadOutlined, NumberOutlined } from '@ant-design/icons';
-import { Redirect } from 'react-router-dom';
+import { Form, Input, Button, Row, Col, Card } from 'antd';
+import { ShoppingCartOutlined, UserOutlined, NumberOutlined } from '@ant-design/icons';
+import axios from 'axios';
+import { Redirect } from 'react-router';
 
 
 const AddProduct = () => {
-    const [imageLink, setImageLink] = useState(null)
-    // handle image upload
-    const handleImageUpload = event => {
-        const imageData = new FormData()
-        imageData.set('key', 'beade2d46fa49e36d76a9a5ff056868a')
-        imageData.append('images', event.target.files)
+    const [imageURL, setIMageURL] = useState(null);
 
-        axios.post("https://api.imgbb.com/1/upload", imageData)
+    const handleImageUpload = event => {
+        console.log(event.target.files[0])
+        const imageData = new FormData();
+        imageData.set('key', '729572a3b5356d1497d6e88f1e9eafde');
+        imageData.append('image', event.target.files[0]);
+
+        axios.post('https://api.imgbb.com/1/upload',
+            imageData)
             .then(function (response) {
-                setImageLink(response.data.data.display_url);
+                setIMageURL(response.data.data.display_url);
             })
             .catch(function (error) {
                 console.log(error);
             });
     }
 
-    // Product Submit
-    const onFinish = data => {
-        if (imageLink !== null) {
+    const onFinish = (data) => {
+        if (imageURL !== null) {
             const productData = data;
-            productData.image = imageLink;
+            productData.image = imageURL;
             fetch('https://rhubarb-surprise-10351.herokuapp.com/addProduct', {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
@@ -64,12 +64,14 @@ const AddProduct = () => {
                                 <Input prefix={<NumberOutlined />} placeholder="Price" />
                             </Form.Item>
 
-                            <Upload name="images"  >
-                                <Button name="images"  type="file" icon={<UploadOutlined />}>Click to Upload</Button>
-                            </Upload>
+                            <div>
+                                <input type="file" name="image" onChange={handleImageUpload} />
+                            </div>
+
+
 
                             <Form.Item >
-                                <Button onClick={handleImageUpload}  htmlType="submit" type="primary" > Submit </Button>
+                                <Button htmlType="submit" type="primary" > Submit </Button>
                             </Form.Item>
                         </Form>
 

@@ -1,6 +1,7 @@
 import { Button, Card, Col, Row } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import Navbar from '../Home/Navbar';
 import '../Style/Style.css'
 
@@ -8,9 +9,7 @@ const CheckOut = () => {
 
     let { id } = useParams();
     const [product, setProduct] = useState({});
-
     const { images, name, price } = product;
-
     useEffect(() => {
         fetch(`https://rhubarb-surprise-10351.herokuapp.com/product/${id}`)
             .then(res => res.json())
@@ -49,8 +48,8 @@ const CheckOut = () => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <br />
-                            <Button type="primary" style={{ float: 'right' }}> CheckOut </Button>
+
+                            <Link to={"/Order/" + id}> <Button type="primary" style={{ float: 'right' }}> CheckOut </Button> </Link>
                         </Card>
                     </Col>
                 </Row>

@@ -60,7 +60,7 @@ const SignIn = () => {
                                     <Button type="primary" htmlType="submit" block > Sign In</Button>
                                     Or <Link to="/SignUp" >Create Account now!</Link>
                                 </Form.Item>
-                                <Button onClick={GoogleSignIn} type="primary" htmlType="submit" shape="round" > <GoogleOutlined /> Sign In With Google</Button>
+                                <Button onClick={GoogleSignIn} type="primary" htmlType="submit" shape="round" > <GoogleOutlined /> Continue With Google</Button>
                             </Form>
                         </Card>
                     </Col>
