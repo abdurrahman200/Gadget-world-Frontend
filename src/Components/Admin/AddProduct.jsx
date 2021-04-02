@@ -8,27 +8,28 @@ import { Redirect } from 'react-router';
 const AddProduct = () => {
     const [imageURL, setIMageURL] = useState(null);
 
-    const handleImageUpload = event => {
-        console.log(event.target.files[0])
+
+    const imageUpload = (event) => {
+        console.log(event.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', '729572a3b5356d1497d6e88f1e9eafde');
         imageData.append('image', event.target.files[0]);
 
-        axios.post('https://api.imgbb.com/1/upload',
-            imageData)
+        axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(function (response) {
                 setIMageURL(response.data.data.display_url);
             })
             .catch(function (error) {
                 console.log(error);
             });
+
     }
 
     const onFinish = (data) => {
         if (imageURL !== null) {
             const productData = data;
             productData.image = imageURL;
-            fetch('https://apricot-crumble-74697.herokuapp.com/addProduct', {
+            fetch('https://rhubarb-surprise-10351.herokuapp.com/addProduct', {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(productData)
@@ -41,6 +42,7 @@ const AddProduct = () => {
         else {
             alert('Image is uploading , Please wait')
         }
+
     };
 
     return (
@@ -65,7 +67,7 @@ const AddProduct = () => {
                             </Form.Item>
 
                             <div>
-                                <input type="file" name="image" onChange={handleImageUpload} />
+                                <input type="file" name="image" onChange={imageUpload} />
                             </div>
 
 
