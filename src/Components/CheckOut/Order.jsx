@@ -1,10 +1,13 @@
 import { Card, Col, Row } from 'antd';
 import React from 'react';
+import { useParams } from 'react-router';
 import { useAuth } from '../Auth/useAuth';
 import Navbar from '../Home/Navbar';
 
 const Order = () => {
     const auth = useAuth()
+    let { id } = useParams()
+
     return (
         <>
             <Navbar />
@@ -15,16 +18,19 @@ const Order = () => {
                             <table>
                                 <thead>
                                     <tr>
-                                      
+                                        <td>id</td>
                                         <th> Name </th>
                                         <th> Mail</th>
+                                        <th> Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
                                     <tr>
+                                        <td>{id}</td>
                                         <td>{auth.user.name}</td>
                                         <td>{auth.user.email}</td>
+                                        <td>{new Date().toDateString()}</td>
                                     </tr>
                                 </tbody>
                             </table>

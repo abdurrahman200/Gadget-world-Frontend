@@ -8,6 +8,7 @@ import '../Style/Style.css'
 const CheckOut = () => {
 
     let { id } = useParams();
+
     const [product, setProduct] = useState({});
     const { images, name, price } = product;
     useEffect(() => {
@@ -15,6 +16,7 @@ const CheckOut = () => {
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [id])
+
 
     return (
         <>

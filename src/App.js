@@ -32,7 +32,7 @@ function App() {
             <Route exact path="/"> <Body /> </Route>
             <Route path="/Home"> <Body /> </Route>
             <PrivateRoute path="/CheckOut/:id"> <CheckOut /> </PrivateRoute>
-            <PrivateRoute path="/Order"> <Order /> </PrivateRoute>
+            <PrivateRoute path="/Order/:id"> <Order /> </PrivateRoute>
             <PrivateRoute path="/Deals"> <Deals /> </PrivateRoute>
             <Route path="/Contact"> <Contact /> </Route>
             <PrivateRoute path="/AdminPanel"> <AdminPanel /> </PrivateRoute>

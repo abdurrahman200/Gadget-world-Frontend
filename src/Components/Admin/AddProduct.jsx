@@ -17,7 +17,9 @@ const AddProduct = () => {
 
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(function (response) {
+                console.log(response);
                 setIMageURL(response.data.data.display_url);
+                console.log(response.data.data.display_url);
             })
             .catch(function (error) {
                 console.log(error);
