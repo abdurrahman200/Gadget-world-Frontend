@@ -6,7 +6,7 @@ import Navbar from '../Home/Navbar';
 
 const Order = () => {
     const auth = useAuth()
-    let { id } = useParams()
+    let { name } = useParams()
 
     return (
         <>
@@ -18,16 +18,16 @@ const Order = () => {
                             <table>
                                 <thead>
                                     <tr>
-                                        <td>id</td>
-                                        <th> Name </th>
-                                        <th> Mail</th>
-                                        <th> Date</th>
+                                        <td>Product Name</td>
+                                        <th>Your Name </th>
+                                        <th>Email Mail</th>
+                                        <th>Order Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
                                     <tr>
-                                        <td>{id}</td>
+                                        <td>{name}</td>
                                         <td>{auth.user.name}</td>
                                         <td>{auth.user.email}</td>
                                         <td>{new Date().toDateString()}</td>

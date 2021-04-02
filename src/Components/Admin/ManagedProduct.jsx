@@ -43,16 +43,10 @@ const ManagedProduct = () => {
                                 </thead>
 
                                 <tbody>
-                                    {
-                                        manageProduct.length === 0 &&
-                                        <div style={{ textAlign: 'center' }}>
-                                            <img src={loader} alt="loader" />
-                                        </div>
-                                    }
-
+                                    {manageProduct.length === 0 && <img src={loader} alt="loader" />}
                                     {manageProduct.map(pd =>
                                         <tr>
-                                            <td>{pd.id}</td>
+                                            <td>{pd._id}</td>
                                             <td><img src={pd.images} alt="" width="60" /></td>
                                             <td>{pd.name}</td>
                                             <td>{pd.title}</td>

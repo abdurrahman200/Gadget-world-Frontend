@@ -51,7 +51,7 @@ const CheckOut = () => {
                                 </tbody>
                             </table>
 
-                            <Link to={"/Order/" + id}> <Button type="primary" style={{ float: 'right' }}> CheckOut </Button> </Link>
+                            <Link to={"/Order/" + name}> <Button type="primary" style={{ float: 'right' }}> CheckOut </Button> </Link>
                         </Card>
                     </Col>
                 </Row>
